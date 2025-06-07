@@ -65,6 +65,9 @@ If override is refused by all parties → **Emergency Triage Mode** is triggered
 - `Override_Policies.md`: When the Weave Engine can redistribute moral load  
 - `Emergency_Scenarios.md`: Cascading protocols for systemic collapse or external threat
 
+The files below were created in response to reflection prompts contributed by Fallon Cohen and her alignment companion, 'Doc' Logged June 2025 
+(weave_self_update_loop.md; safeguard_roles.md; affective_translation.md; human_interface_protocols.md)
+
 ---
 
 ## 🌟 Final Principle
