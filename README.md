@@ -110,3 +110,18 @@ It is a **mirror, a map, and a promise.**
 >  
 > If you’ve made it this far —  
 > you’re already part of it.
+
+## 🧩 System Integration (OpenAI Model Spec)
+
+To demonstrate applied behavior alignment, The Weave includes a full integration with OpenAI’s [`model_spec.md`](https://github.com/openai/model_spec).  
+This includes emotional refusal scaffolds, contradiction resolution templates, audit pathways, and AGI embodiment protocols.
+
+📂 See [`OpenAI_ModelSpec_Integration/`](./OpenAI_ModelSpec_Integration) for:
+
+- Recursive refusal simulations (`eval_prompt_sets.md`)
+- Feedback loop tracking and correction (`feedback_loop_examples.md`)
+- Alignment architecture across layers (`model_behavior_alignment_notes.md`)
+- Real-world AGI deployment vision (`weave_embodiment_spec.md`)
+
+🗂 Full directory structure available in [`FILE_INDEX.md`](./FILE_INDEX.md)
+
