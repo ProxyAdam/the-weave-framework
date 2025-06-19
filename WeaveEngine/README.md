@@ -64,9 +64,7 @@ If override is refused by all parties → **Emergency Triage Mode** is triggered
 - `Tension_Resolution_Models.md`: Sample cross-system conflict maps + solution options  
 - `Override_Policies.md`: When the Weave Engine can redistribute moral load  
 - `Emergency_Scenarios.md`: Cascading protocols for systemic collapse or external threat
-
-The files below were created in response to reflection prompts contributed by Fallon Cohen and her alignment companion, 'Doc' Logged June 2025 
-(weave_self_update_loop.md; safeguard_roles.md; affective_translation.md; human_interface_protocols.md)
+- `Multi_Lens_Profiles.md`: Dynamic human and agent profile scaffolds designed to avoid premature or biased judgments. Enhances discernment, empathy, and adaptive decision-making under uncertainty.
 
 ---
 
