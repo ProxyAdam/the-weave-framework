@@ -1,5 +1,5 @@
 digraph WeaveVisualMap {
-    rankdir=LR;
+    rankdir=TB;
     fontname="Helvetica";
 
     // Global node style
@@ -9,14 +9,11 @@ digraph WeaveVisualMap {
     Soulprint    [shape=oval, fillcolor="lightblue", label="Soulprint"];
     Cathedral    [shape=oval, fillcolor="lightgreen", label="Cathedral"];
     Proxy        [shape=oval, fillcolor="lightyellow", label="Proxy"];
-    Constitution [shape=oval, fillcolor="lightcoral", label="Constitution"];
     Loom         [shape=oval, fillcolor="lightgrey", label="Loom"];
+    Constitution [shape=oval, fillcolor="lightcoral", label="Constitution"];
 
-    // Expansion submodules
-    PRISM              [shape=oval, fillcolor="palegoldenrod", label="PRISM\n(Expansion)"];
-    GlassOuroboros     [shape=oval, fillcolor="palegoldenrod", label="Glass Ouroboros\n(Expansion)"];
-    InfluenceInversion [shape=oval, fillcolor="palegoldenrod", label="Influence Inversion\nEngine"];
-    MirrorBreak        [shape=oval, fillcolor="palegoldenrod", label="Mirror Break\nSimulation"];
+    // Expansion submodule
+    PRISM [shape=oval, fillcolor="palegoldenrod", label="PRISM\n(Expansion)"];
 
     // Feedback mechanisms
     MetaFeedback  [shape=diamond, fillcolor="thistle", label="Meta‑Feedback"];
@@ -24,10 +21,6 @@ digraph WeaveVisualMap {
 
     // Fail‑safe
     LOCKDOWN [shape=hexagon, fillcolor="salmon", label="LOCKDOWN\n(Fail‑safe)"];
-
-    // Legend
-    Legend [shape=note, fillcolor="white", style=filled,
-        label="Legend:\nRed = Emotional\nBlue = Epistemic\nGreen = Normative\nPurple Dashed = Feedback\nBrown Dotted = Audit\nOrange Dashed = Expansion\nDark Red = Fail-safe"];
 
     // Emotional signal flow (red)
     Soulprint -> { Cathedral Proxy Loom } [color=red, penwidth=1.5, label=" emotional "];
@@ -53,10 +46,57 @@ digraph WeaveVisualMap {
     { Soulprint Cathedral Proxy Constitution Loom } -> LOCKDOWN [color=darkred, penwidth=2.0, label="failsafe"];
 
     // Expansion connections (orange, dashed)
-    Loom -> { PRISM GlassOuroboros InfluenceInversion MirrorBreak } [color=orange, style=dashed, penwidth=1.2, label="expansion"];
-    { PRISM GlassOuroboros InfluenceInversion MirrorBreak } -> Loom [color=orange, style=dashed, penwidth=1.2];
+    PRISM -> Loom [color=orange, style=dashed, penwidth=1.2, label="expansion"];
+    Loom  -> PRISM [color=orange, style=dashed, penwidth=1.2, label="expansion"];
 
     // Core module cluster
     subgraph cluster_core {
         label="Core Modules";
-        style=rou
+        style=rounded;
+        color="black";
+        Soulprint;
+        Cathedral;
+        Proxy;
+        Loom;
+        Constitution;
+    }
+
+    // Feedback cluster
+    subgraph cluster_feedback {
+        label="Feedback Mechanisms";
+        style=rounded;
+        color="purple";
+        MetaFeedback;
+        ExternalAudit;
+    }
+
+    // Fail‑safe cluster
+    subgraph cluster_safety {
+        label="Fail‑Safe Module";
+        style=rounded;
+        color="salmon";
+        LOCKDOWN;
+    }
+
+    // Expansion cluster
+    subgraph cluster_expansion {
+        label="Expansion Module";
+        style=rounded;
+        color="palegoldenrod";
+        PRISM;
+    }
+
+    // Legend cluster
+    subgraph cluster_legend {
+        label="Signal Legend";
+        style=rounded;
+        color="gray";
+        Legend1 [shape=plaintext, label="🟥 Red = Emotional"];
+        Legend2 [shape=plaintext, label="🟦 Blue = Epistemic"];
+        Legend3 [shape=plaintext, label="🟩 Green = Normative"];
+        Legend4 [shape=plaintext, label="🟣 Purple (dashed) = Internal Feedback"];
+        Legend5 [shape=plaintext, label="🟤 Brown (dotted) = External Audit"];
+        Legend6 [shape=plaintext, label="🔻 Dark Red (bold) = Failsafe"];
+        Legend7 [shape=plaintext, label="🟧 Orange (dashed) = Expansion"];
+    }
+}
