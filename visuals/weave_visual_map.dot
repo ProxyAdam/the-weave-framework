@@ -1,0 +1,88 @@
+digraph WeaveVisualMap {
+    rankdir=LR;
+    fontname="Helvetica";
+
+    // Global node style
+    node [style=filled, fontname="Helvetica", fontsize=10];
+
+    // Core modules
+    Soulprint    [shape=oval, fillcolor="lightblue", label="Soulprint"];
+    Cathedral    [shape=oval, fillcolor="lightgreen", label="Cathedral"];
+    Proxy        [shape=oval, fillcolor="lightyellow", label="Proxy"];
+    Constitution [shape=oval, fillcolor="lightcoral", label="Constitution"];
+    Loom         [shape=oval, fillcolor="lightgrey", label="Loom"];
+
+    // Expansion submodule
+    PRISM [shape=oval, fillcolor="palegoldenrod", label="PRISM\n(Expansion)"];
+
+    // Feedback mechanisms
+    MetaFeedback  [shape=diamond, fillcolor="thistle", label="Meta‑Feedback"];
+    ExternalAudit [shape=diamond, fillcolor="lightcyan", label="External Audit"];
+
+    // Fail‑safe
+    LOCKDOWN [shape=hexagon, fillcolor="salmon", label="LOCKDOWN\n(Fail‑safe)"];
+
+    // Emotional signal flow (red)
+    Soulprint -> { Cathedral Proxy Loom } [color=red, penwidth=1.5, label=" emotional "];
+
+    // Epistemic signal flow (blue)
+    Cathedral -> Proxy           [color=blue, penwidth=1.5, label=" epistemic "];
+    Proxy     -> Loom            [color=blue, penwidth=1.5, label=" epistemic "];
+    Loom      -> Constitution    [color=blue, penwidth=1.5, label=" epistemic "];
+
+    // Normative signal flow (green)
+    Constitution -> { Soulprint Cathedral Proxy Loom } [color=green, penwidth=1.5, label=" normative "];
+    Loom         -> { Proxy Soulprint }                [color=green, penwidth=1.5, label=" normative "];
+
+    // Feedback loops (purple, dashed)
+    { Soulprint Cathedral Proxy Constitution Loom } -> MetaFeedback [color=purple, style=dashed, penwidth=1.2, label="feedback"];
+    MetaFeedback -> { Soulprint Cathedral Proxy Constitution Loom } [color=purple, style=dashed, penwidth=1.2];
+
+    // External audit loops (brown, dotted)
+    { Soulprint Cathedral Proxy Constitution Loom } -> ExternalAudit [color=brown, style=dotted, penwidth=1.2, label="audit"];
+    ExternalAudit -> { Soulprint Cathedral Proxy Constitution Loom } [color=brown, style=dotted, penwidth=1.2];
+
+    // Fail‑safe connections (dark red, bold)
+    { Soulprint Cathedral Proxy Constitution Loom } -> LOCKDOWN [color=darkred, penwidth=2.0, label="failsafe"];
+
+    // Expansion connections (orange, dashed)
+    PRISM -> Loom [color=orange, style=dashed, penwidth=1.2, label="expansion"];
+    Loom  -> PRISM [color=orange, style=dashed, penwidth=1.2, label="expansion"];
+
+    // Core module cluster
+    subgraph cluster_core {
+        label="Core Modules";
+        style=rounded;
+        color="grey";
+        Soulprint;
+        Cathedral;
+        Proxy;
+        Constitution;
+        Loom;
+    }
+
+    // Feedback cluster
+    subgraph cluster_feedback {
+        label="Feedback Mechanisms";
+        style=dashed;
+        color="thistle";
+        MetaFeedback;
+        ExternalAudit;
+    }
+
+    // Fail‑safe cluster
+    subgraph cluster_safety {
+        label="Fail‑Safe";
+        style=dotted;
+        color="salmon";
+        LOCKDOWN;
+    }
+
+    // Expansion cluster
+    subgraph cluster_expansion {
+        label="Expansion";
+        style=dotted;
+        color="palegoldenrod";
+        PRISM;
+    }
+}
