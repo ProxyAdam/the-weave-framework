@@ -1963,7 +1963,8 @@ z
   </clipPath>
  </defs>
 <!-- Legend -->
-<g font-family="Helvetica" font-size="12" transform="translate(1000, 80)">
+<g font-family="Helvetica" font-size="12" transform="translate(50,820)">
+  <rect x="-10" y="-20" width="280" height="180" fill="white" stroke="black" stroke-width="0.5"/>
   <text x="0" y="0" font-weight="bold">Legend</text>
   
   <line x1="0" y1="20" x2="20" y2="20" stroke="red" stroke-width="2"/>
