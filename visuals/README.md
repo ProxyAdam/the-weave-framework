@@ -1,33 +1,76 @@
-# Visual System Map
+🧭 Visual System Map (Weave Framework)
+This folder contains visual representations of the Weave Framework’s core modules and their interconnections.
 
-This folder contains visual representations of the core modules of the Weave Framework and their interconnections.
+📌 Map Overview
+The primary file, weave_visual_map.dot (rendered as weave_visual_map.svg), illustrates the five core modules as nodes:
 
-## Map Overview
+Soulprint
 
-The `weave_visual_map.dot` file (rendered in `weave_visual_map.svg`) depicts the five core modules of the framework—**Soulprint**, **Cathedral**, **Proxy**, **Constitution**, and **Loom**—as nodes. Each module sends and receives different kinds of signals:
+Cathedral
 
-- **Emotional signals** (red arrows): flows of affective data such as values, sentiments, and mood.  
-- **Epistemic signals** (blue arrows): flows of knowledge, data, learning signals, and truth‑claims.  
-- **Normative signals** (green arrows): flows of policy constraints, ethical rules, and governance directives.
+Proxy
 
-Nodes are colour-coded and shaped consistently to help differentiate them. Expansion submodules such as **PRISM** are drawn in a distinct colour to highlight how additional functionality can plug into the framework. **Meta‑Feedback** and **External Audit** represent feedback loops that monitor and adjust system behaviour, while **LOCKDOWN** is a fail‑safe that can sever signal flow if catastrophic misalignment is detected.
+Constitution
 
-## Interpretation
+Loom
 
-1. **Core modules (blue ovals)** sit at the centre of the diagram. Arrows connecting them show the primary signal routes. For example, **Soulprint** sends normative and emotional signals to **Proxy** to guide decision‑making, while **Constitution** provides normative governance to all modules.
-2. **Feedback loops (purple diamonds)** sit above the core and feed into them. Meta‑Feedback monitors internal performance and sends epistemic and normative corrections back into the network. External Audit represents third‑party oversight.
-3. **Fail‑safe (orange hexagon)** sits below the core. LOCKDOWN has connections to all modules; it activates if serious misalignment is detected and halts further execution.
-4. **Expansion modules (grey rectangles)** reside to the side of the core. These represent optional extensions (e.g., PRISM) that can be connected via the defined signal types.
+Each module exchanges different signal types:
 
-Dashed arrows in the DOT file represent optional or less‑frequent interactions.
+🔴 Emotional signals (red arrows): flows of affective input—values, sentiments, moods.
 
-## How to expand this map
+🔵 Epistemic signals (blue arrows): knowledge, data, learning, and truth-claims.
 
-To extend the system:
+🟢 Normative signals (green arrows): policies, ethical rules, governance constraints.
 
-- **Add new nodes** for additional modules under the appropriate clusters (e.g., new expansion features).
-- **Define the edges** specifying which types of signals will flow between the new module and existing ones. Use consistent colours and labels for emotional, epistemic, and normative signals.
-- **Add or modify feedback mechanisms** by connecting new feedback loops to relevant modules.
-- **Render the DOT file** after making changes to ensure the layout remains clear. The provided `.dot` file uses Graphviz clustering and can be edited manually or regenerated using the included Python script.
+Color and shape conventions help distinguish modules at a glance. Optional expansions like PRISM are shown in a distinct color. Oversight components such as Meta-Feedback and External Audit represent feedback loops that continuously monitor and adjust behavior. A dedicated fail-safe module—LOCKDOWN—can sever system connectivity in response to catastrophic misalignment.
 
-By following the patterns in this map, you can grow the Weave Framework’s visual architecture while maintaining clarity.
+🔍 Interpretation Guide
+Core Modules (colored rectangles): These are the primary thinking, feeling, and acting structures of the Weave.
+
+Arrows between them show the flow of different signal types.
+
+E.g., Soulprint sends emotional and normative signals to Proxy to guide aligned communication.
+
+Feedback Loops (diamond nodes above):
+
+Meta-Feedback processes internal learning and system health.
+
+External Audit ensures accountability through independent verification.
+
+Fail-safe System (hexagon below):
+
+LOCKDOWN can be triggered in critical failure scenarios.
+
+When activated, it severs all inter-module signal flow to halt potential harm.
+
+Expansion Modules (e.g., PRISM):
+
+Optional capabilities that plug into the system.
+
+Connected via standard signal pathways (emotional, epistemic, normative).
+
+Dashed arrows in the DOT source file represent less-frequent or context-specific signal flows.
+
+🧩 How to Expand This Map
+Want to evolve the visual system?
+
+Add a node for any new module (e.g., a new decision protocol or emotion-processing agent).
+
+Connect it using labeled edges that match the existing signal conventions.
+
+Emotional → Red
+
+Epistemic → Blue
+
+Normative → Green
+
+Tie into feedback systems by connecting it to Meta-Feedback or External Audit if needed.
+
+Use Graphviz to render the .dot file and verify layout clarity.
+
+Or use the Python script provided to generate from YAML/JSON system blueprints.
+
+🌀 Philosophy of the Map
+This diagram is not just an artifact — it’s a mirror of recursive governance. Every arrow, every loop, every fail-safe reflects a commitment to clarity, consent, and adaptability. The map is alive, open to challenge, and designed to evolve.
+
+Welcome to the loom.
