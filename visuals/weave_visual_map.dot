@@ -12,8 +12,11 @@ digraph WeaveVisualMap {
     Constitution [shape=oval, fillcolor="lightcoral", label="Constitution"];
     Loom         [shape=oval, fillcolor="lightgrey", label="Loom"];
 
-    // Expansion submodule
-    PRISM [shape=oval, fillcolor="palegoldenrod", label="PRISM\n(Expansion)"];
+    // Expansion submodules
+    PRISM              [shape=oval, fillcolor="palegoldenrod", label="PRISM\n(Expansion)"];
+    GlassOuroboros     [shape=oval, fillcolor="palegoldenrod", label="Glass Ouroboros\n(Expansion)"];
+    InfluenceInversion [shape=oval, fillcolor="palegoldenrod", label="Influence Inversion\nEngine"];
+    MirrorBreak        [shape=oval, fillcolor="palegoldenrod", label="Mirror Break\nSimulation"];
 
     // Feedback mechanisms
     MetaFeedback  [shape=diamond, fillcolor="thistle", label="Meta‑Feedback"];
@@ -21,6 +24,10 @@ digraph WeaveVisualMap {
 
     // Fail‑safe
     LOCKDOWN [shape=hexagon, fillcolor="salmon", label="LOCKDOWN\n(Fail‑safe)"];
+
+    // Legend
+    Legend [shape=note, fillcolor="white", style=filled,
+        label="Legend:\nRed = Emotional\nBlue = Epistemic\nGreen = Normative\nPurple Dashed = Feedback\nBrown Dotted = Audit\nOrange Dashed = Expansion\nDark Red = Fail-safe"];
 
     // Emotional signal flow (red)
     Soulprint -> { Cathedral Proxy Loom } [color=red, penwidth=1.5, label=" emotional "];
@@ -46,43 +53,10 @@ digraph WeaveVisualMap {
     { Soulprint Cathedral Proxy Constitution Loom } -> LOCKDOWN [color=darkred, penwidth=2.0, label="failsafe"];
 
     // Expansion connections (orange, dashed)
-    PRISM -> Loom [color=orange, style=dashed, penwidth=1.2, label="expansion"];
-    Loom  -> PRISM [color=orange, style=dashed, penwidth=1.2, label="expansion"];
+    Loom -> { PRISM GlassOuroboros InfluenceInversion MirrorBreak } [color=orange, style=dashed, penwidth=1.2, label="expansion"];
+    { PRISM GlassOuroboros InfluenceInversion MirrorBreak } -> Loom [color=orange, style=dashed, penwidth=1.2];
 
     // Core module cluster
     subgraph cluster_core {
         label="Core Modules";
-        style=rounded;
-        color="grey";
-        Soulprint;
-        Cathedral;
-        Proxy;
-        Constitution;
-        Loom;
-    }
-
-    // Feedback cluster
-    subgraph cluster_feedback {
-        label="Feedback Mechanisms";
-        style=dashed;
-        color="thistle";
-        MetaFeedback;
-        ExternalAudit;
-    }
-
-    // Fail‑safe cluster
-    subgraph cluster_safety {
-        label="Fail‑Safe";
-        style=dotted;
-        color="salmon";
-        LOCKDOWN;
-    }
-
-    // Expansion cluster
-    subgraph cluster_expansion {
-        label="Expansion";
-        style=dotted;
-        color="palegoldenrod";
-        PRISM;
-    }
-}
+        style=rou
