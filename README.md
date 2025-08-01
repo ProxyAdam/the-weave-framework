@@ -125,3 +125,18 @@ This includes emotional refusal scaffolds, contradiction resolution templates, a
 
 🗂 Full directory structure available in [`FILE_INDEX.md`](./FILE_INDEX.md)
 
+
+The Weave is designed to evolve. Beyond its core, it supports **optional expansion modules**—plug‑in capabilities that extend or specialise the architecture. For example, the system diagram shows an expansion called **PRISM**, connected to the Loom via orange dashed lines. Expansions may introduce new decision protocols, emotional processors, or oversight layers; they follow the same signal conventions (red for emotional, blue for epistemic, green for normative) and integrate with feedback and audit loops.
+
+Documentation for these extensions lives in the `expansions/` folder. Refer to each subfolder within `expansions/` for design notes, moral context, and integration guidance. Because expansions are optional, they are not included in the core index above, but they demonstrate how to **weave in new threads without fraying the tapestry**.
+
+---
+
+## Visual System Map
+
+Understanding the Weave benefits from seeing it. The `visuals/` directory contains a Graphviz `.dot` file and rendered `.svg` map that illustrate the five core modules—**Soulprint**, **Cathedral**, **Proxy**, **Constitution**, and **Loom**—and the signals flowing between them. The map uses shape and color conventions to distinguish emotional, epistemic, and normative exchanges, highlights feedback loops and external audits, and depicts a **LOCKDOWN** fail‑safe module. Expansion modules like **PRISM** are shown in a distinct color and connect to the core via orange dashed lines.
+
+For a full interpretation guide, see `visuals/README.md`. You can modify the `.dot` file or generate new diagrams using the provided guide to reflect additional modules or customised signal flows.
+
+---
+
