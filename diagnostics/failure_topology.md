@@ -166,4 +166,52 @@ A data import script fails during a weekend batch run. The automated pause flag 
 **Key Lesson:**  
 Loose coupling, redundancy, and visible assumptions prevent small faults from becoming system-wide crises.
 
+1. Interpretation & Scoring
+Optional quick-risk scoring for the Snap Test:
+
+Scoring: For each question, assign:
+
+0 = Safe / Honeycomb-aligned
+
+1 = Mild risk / Mixed pattern
+
+2 = Severe risk / Glass Vein pattern
+
+Aggregate Thresholds:
+
+0–6 → Stable Honeycomb pattern
+
+7–13 → Transitional; monitor & add safeguards
+
+14–20 → Glass Vein dominance — act within one operational cycle
+
+2. Interpretation Link
+Interpretation Note: For translating these findings into action and integrating with other Weave diagnostics, see diagnostic_interpretation.md.
+
+3. Common Composite Failure Patterns
+Cluster Pattern	Signature Questions	Threat	Countermeasure
+Overclocked Consensus	Q1, Q6, Q9	Groupthink drives unchecked speed	Introduce dissent drills & decouple trust loops
+Siloed Authority	Q3, Q7, Q8	Critical halt or data flows locked to one actor	Shard authority + cross-train backups
+Blind Spot Cascade	Q2, Q4, Q5	Hidden rules + stale truths + no slowdown	Require assumption logs + periodic revalidation
+
+4. Minimum Viable Honeycomb Checklist
+For environments with limited resources, these are the essential safeguards:
+
+Redundancy for all single-point failure nodes.
+
+At least one auto-pause trigger tied to uncertainty thresholds.
+
+Documented stop authority distributed across ≥3 non-aligned roles.
+
+Public assumption ledger updated quarterly.
+
+5. Additional Cross-Domain Case Studies
+Case Study 3 — Supply Chain Honeycomb
+A shipping company maintains multiple suppliers for critical components and publishes real-time inventory to all partners. When a factory fire halts one supplier, orders reroute automatically with minimal delay.
+
+Case Study 4 — PR Containment
+A government agency maintains a 24/7 fact-check & response team. When an incorrect policy memo is leaked at midnight, the auto-pause content release system prevents publication, allowing for a corrected statement by morning.
+
+Case Study 5 — Cybersecurity Incident
+A corporate SOC has split incident response authority between technical, compliance, and communications leads. A zero-day exploit is detected; while tech patches, comms informs stakeholders, and compliance initiates legal notifications, all within 2 hours — preventing regulatory fines and customer exodus.
 ---
