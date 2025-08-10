@@ -78,11 +78,10 @@
     - human_interface_protocols.md
     - safeguard_roles.md
     - weave_self_update_loop.md
-    - - diagnostics
-  - README.md
-  - failure_topology.md
-  - trust_decay_index.md
-  - trust_decay_index
+  - diagnostics
     - README.md
-    - TDI_template.xlsx
-    - TDI_heatmap_template.png
+    - failure_topology.md
+    - trust_decay_index.md
+      - trust_decay_index
+      - TDI_template.xlsx
+      - TDI_heatmap_template.png
