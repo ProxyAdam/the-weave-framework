@@ -87,6 +87,45 @@ This guide explains how to interpret responses to the core Weave Framework diagn
 - Look for changes over **time** — trendlines are more important than one-off results.
 - Flag any anchor question failures for **immediate** review, regardless of other outcomes.
 
+6. Failure Topology Integration
+When interpreting Failure Topology Snap Test results, use both the pattern identity (Glass Vein vs. Honeycomb) and the cluster patterns (e.g., Overclocked Consensus, Siloed Authority, Blind Spot Cascade).
+
+Scoring Guidance (if applied):
+
+0–6 → Stable Honeycomb pattern: Maintain existing safeguards; monitor at normal cadence.
+
+7–13 → Transitional state: Add friction to fast trust loops, shard stop authority, and revalidate assumptions before next operational cycle.
+
+14–20 → Glass Vein dominance: Deploy immediate containment protocols, initiate redundancy buildout, and reconfigure incentives within one cycle.
+
+Anchor Questions for Failure Topology:
+
+Q3 (Single-Point Failure), Q4 (Assumptions Never Re-Validated), Q8 (Stop Authority Without Retaliation)
+
+Any “Glass Vein” answer to these should be treated as an automatic High consequence level, regardless of total score.
+
+7. Cross-Module Correlation
+If Failure Topology and another module (e.g., Trust Decay Index) both flag the same node/actor:
+
+Escalate to critical path intervention — this is a probable cascade ignition point.
+
+Apply both relational (trust repair) and structural (resilience building) interventions in parallel.
+
+8. Rapid Containment Playbook (Optional Add-On)
+When a Failure Topology scan scores ≥14 or trips any anchor question:
+
+Pause high-impact ops for the affected node/system.
+
+Isolate failure vector (technical or human) within one operational day.
+
+Deploy redundancy — assign backup roles, mirror data/processes.
+
+Rebuild trust loop via joint verification sessions.
+
+Re-run Snap Test within 14 days to confirm mitigation.
+
+
+
 ---
 
 *Last Updated: 2025-08-10*
