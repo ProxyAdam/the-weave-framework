@@ -32,14 +32,18 @@ Each diagnostic file in `/diagnostics` should follow this structure:
 ## Current Diagnostics
 
 ### 1. [Failure Topology Module](failure_topology.md)
-**Pattern:** Glass Vein vs. Honeycomb  
-**Purpose:** Identify and invert systems prone to cascading collapse from tight coupling + blind spots + unearned trust.  
+**entify and invert systems prone to cascading collapse from tight coupling + blind spots + unearned trust.  
 **Applications:** AI alignment pipelines, institutional research processes, critical infrastructure, governance bodies.
+### 2. [Trust Decay Index](trust_decay_index.md)
+**Pattern:** Accelerating breakdown of reliable trust loops in long-term collaborations.
+**Purpose:** Measure and map the rate at which trust deteriorates across relationships or networks to inform targeted remediation.
+**Applications:** Project teams, academic partnerships, cross-functional alliances, corporate culture audits.
+
+
 
 ---
 
 ## Future Diagnostics (Planned)
-- **Trust Decay Index** – Measures erosion of reliable trust loops in long-term collaborations.
 - **Narrative Drift Map** – Detects divergence between an organization’s stated mission and its lived decision-making patterns.
 - **Authority Capture Detector** – Identifies concentration of power and barriers to safe intervention.
 
