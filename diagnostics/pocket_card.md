@@ -2,6 +2,23 @@
 
 **Purpose:** Run both Trust Decay Index (TDI) + Failure Topology (FT) in <30 min for a fast system health read.
 
+[1️⃣ Prep]
+ ↓
+[2️⃣ TDI Quick Pass] → Record scores + weak dims
+ ↓
+[3️⃣ FT Snap Test] → Flag anchors (Q3, Q4, Q8)
+ ↓
+[4️⃣ Cross-Map Weaknesses] → Look for cascade candidates
+ ↓
+[5️⃣ Escalate Decision]
+    ├─ Contain Now → Immediate action + halt
+    ├─ Mitigate Soon → Action plan + schedule
+    └─ Monitor → Maintain cadence
+ ↓
+[6️⃣ Output Bundle]
+ ↓
+[7️⃣ Cadence/Triggers]
+
 ---
 
 ## 1️⃣ Prep (2 min)
